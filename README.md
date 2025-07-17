@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Auth App
+A modern authentication system built with Next.js, MongoDB, and Tailwind CSS, featuring animated login and register forms with MVC architecture.
+Features
 
-## Getting Started
+Login with email or username and password validation.
+Register with username, email, date of birth, gender, terms agreement, and password confirmation.
+Smooth animations using Framer Motion.
+Responsive design with Tailwind CSS.
+MongoDB for secure user data storage.
+Client-side and server-side validation with Zod.
 
-First, run the development server:
+Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Node.js (v16 or higher)
+MongoDB Atlas account
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Setup
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Clone the repository:git clone <repository-url>
+cd auth-app
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+Install dependencies:npm install
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Create a .env.local file in the root directory and add your MongoDB URI:MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/auth-app?retryWrites=true&w=majority
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+Run the development server:npm run dev
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Open http://localhost:3000 in your browser.
+
+File Structure
+
+/app: Next.js pages and API routes.
+/components: Reusable React components.
+/controllers: Business logic for authentication.
+/models: MongoDB schemas.
+/lib: Database connection and validation logic.
+/styles: Custom styles and Tailwind configuration.
+
+Dependencies
+
+next: Next.js framework.
+mongoose: MongoDB ORM.
+bcryptjs: Password hashing.
+framer-motion: Animations.
+zod: Validation.
+tailwindcss: Styling.
+
+License
+MIT
